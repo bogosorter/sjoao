@@ -19,7 +19,8 @@ body {
     margin: 0;
 
     header {
-        height: 30vh;
+        max-height: 30vh;
+        padding-top: 2em;
 
         display: flex;
         flex-direction: column;
