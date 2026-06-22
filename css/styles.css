@@ -41,7 +41,7 @@ body {
     }
 
     main {
-        max-width: 80em;
+        max-width: 90em;
         padding: 2em;
         margin: auto;
 
@@ -54,12 +54,14 @@ body {
             overflow: hidden;
 
             img {
+                aspect-ratio: 1/1;
+                object-fit: cover;
                 width: 100%;
                 display: block;
             }
 
             p {
-                font-size: 1.2em;
+                font-size: 1em;
             }
 
             &:has(p) {
@@ -70,12 +72,11 @@ body {
             }
 
             &:has(img) {
-                border: 1px solid var(--text-weak);
             }
         }
 
-        @media (max-width: 64em) {
-            grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 85em) {
+            grid-template-columns: repeat(3, 1fr);
         }
         @media (max-width: 48em) {
             grid-template-columns: repeat(1, 1fr);
