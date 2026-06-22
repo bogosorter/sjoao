@@ -41,17 +41,19 @@ body {
     }
 
     main {
-        max-width: 90em;
+        max-width: 75em;
         padding: 2em;
         margin: auto;
 
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1em;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
 
-        .cell {
-            border-radius: 0.5em;
-            overflow: hidden;
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
 
             img {
                 aspect-ratio: 1/1;
@@ -63,22 +65,14 @@ body {
             p {
                 font-size: 1em;
             }
-
-            &:has(p) {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 1em;
-            }
-
-            &:has(img) {
-            }
         }
 
-        @media (max-width: 85em) {
-            grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 70em) {
+            max-width: 55em;
+            grid-template-columns: repeat(2, 1fr);
         }
         @media (max-width: 48em) {
+            max-width: 33em;
             grid-template-columns: repeat(1, 1fr);
         }
     }
